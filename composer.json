@@ -13,7 +13,12 @@
             "Taboritis\\ElegantSlackMessages\\": "src/"
         }
     },
-    "authors": [
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "authors": [
         {
             "name": "Piotr Skrobol"
         }
