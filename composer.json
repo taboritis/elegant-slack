@@ -3,7 +3,7 @@
     "description": "Elegant Messages in Slack",
     "type": "library",
     "require": {
-        "php": "^^8.3",
+        "php": "^8.3",
         "ext-curl": "*",
         "ext-json": "*"
     },
