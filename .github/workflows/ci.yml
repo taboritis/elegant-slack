@@ -33,7 +33,7 @@ jobs:
 
         # Copy .env file
       - name: Copy .env file
-        run: cp .github/.env.github .env
+        run: cp .github/workflows/.env.github .env
 
       # PHP Unit tests
       - name: Run PHPUnit
