@@ -1,5 +1,3 @@
 .idea/
 vendor/
-.phpactor.json
-.phpunit.cache
-.run/
+
