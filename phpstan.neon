@@ -1,19 +1,9 @@
+includes:
+    - ./phpstan-baseline.neon
+
 parameters:
-    # Ścieżki do katalogów lub plików, które mają być analizowane
     paths:
         - src
-        - tests
-
-    # Nie uwzględniaj określonych folderów/plików podczas analizy
-    excludePaths:
-        analyseAndScan:
-            - %currentWorkingDirectory%/vendor
-            - %currentWorkingDirectory%/cache
-
-    # Poziom analizy (0 - najniższy, 9 - najwyższy)
     level: 7
-
-    # Dodatkowe pliki bootstrapowe
     bootstrapFiles:
         - %currentWorkingDirectory%/vendor/autoload.php
-
