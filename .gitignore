@@ -3,3 +3,4 @@ vendor/
 .phpactor.json
 .phpunit.cache
 .run/
+.env
