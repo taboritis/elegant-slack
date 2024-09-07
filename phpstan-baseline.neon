@@ -1,0 +1,21 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\#1 \\$handle of function curl_close expects CurlHandle, CurlHandle\\|false given\\.$#"
+			count: 2
+			path: src/SlackClient.php
+
+		-
+			message: "#^Parameter \\#1 \\$handle of function curl_error expects CurlHandle, CurlHandle\\|false given\\.$#"
+			count: 1
+			path: src/SlackClient.php
+
+		-
+			message: "#^Parameter \\#1 \\$handle of function curl_exec expects CurlHandle, CurlHandle\\|false given\\.$#"
+			count: 1
+			path: src/SlackClient.php
+
+		-
+			message: "#^Parameter \\#1 \\$handle of function curl_setopt expects CurlHandle, CurlHandle\\|false given\\.$#"
+			count: 4
+			path: src/SlackClient.php
