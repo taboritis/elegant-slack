@@ -1,9 +1,0 @@
-includes:
-    - ./phpstan-baseline.neon
-
-parameters:
-    paths:
-        - src
-    level: 7
-    bootstrapFiles:
-        - %currentWorkingDirectory%/vendor/autoload.php
