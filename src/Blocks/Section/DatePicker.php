@@ -4,17 +4,16 @@ declare(strict_types=1);
 
 namespace Taboritis\ElegantSlack\Blocks\Section;
 
-use PHP_CodeSniffer\Generators\Markdown;
 use Taboritis\ElegantSlack\Blocks\Block;
 
 class DatePicker extends Block
 {
-    private PlainText|Markdown $text;
+    private PlainText|Mrkdwn $text;
     private PlainText $placeholder;
 
     public function __construct(
-        PlainText|Markdown|string $text,
-        private readonly ?string $initialDate = null,
+        PlainText|Mrkdwn|string $text,
+        private readonly ?string $initialDate,
         PlainText|string $placeholder,
         private readonly string $actionId
     ) {

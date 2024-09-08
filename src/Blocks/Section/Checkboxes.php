@@ -18,9 +18,8 @@ class Checkboxes extends Block
 
     public function __construct(
         PlainText|Mrkdwn|string $text,
-        private string          $actionId
-    )
-    {
+        private string $actionId
+    ) {
         $this->text = is_string($text) ? new PlainText($text) : $text;
     }
 
