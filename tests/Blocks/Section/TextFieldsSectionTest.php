@@ -12,7 +12,7 @@ use Taboritis\ElegantSlack\Blocks\Section\PlainTextSection;
 use Taboritis\ElegantSlack\Blocks\Section\TextFieldsSection;
 
 #[CoversClass(TextFieldsSection::class)]
-class TextFieldsTest extends TestCase
+class TextFieldsSectionTest extends TestCase
 {
     private TextFieldsSection $textFields;
 

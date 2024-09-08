@@ -11,7 +11,7 @@ use Taboritis\ElegantSlack\Blocks\Block;
 use Taboritis\ElegantSlack\Blocks\Section\DatePickerSection;
 
 #[CoversClass(DatePickerSection::class)]
-class DatePickerTest extends TestCase
+class DatePickerSectionTest extends TestCase
 {
     private DatePickerSection $datePicker;
 

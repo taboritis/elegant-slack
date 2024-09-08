@@ -11,7 +11,7 @@ use Taboritis\ElegantSlack\Blocks\Block;
 use Taboritis\ElegantSlack\Blocks\Section\ImageSection;
 
 #[CoversClass(ImageSection::class)]
-class ImageTest extends TestCase
+class ImageSectionTest extends TestCase
 {
     private ImageSection $image;
 

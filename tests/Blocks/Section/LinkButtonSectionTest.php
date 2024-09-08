@@ -10,7 +10,7 @@ use Taboritis\ElegantSlack\Blocks\Block;
 use Taboritis\ElegantSlack\Blocks\Section\LinkButtonSection;
 
 #[CoversClass(LinkButtonSection::class)]
-class LinkButtonTest extends \PHPUnit\Framework\TestCase
+class LinkButtonSectionTest extends \PHPUnit\Framework\TestCase
 {
     #[Test]
     public function it_extends_a_block(): void

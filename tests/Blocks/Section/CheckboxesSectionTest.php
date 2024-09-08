@@ -12,7 +12,7 @@ use Taboritis\ElegantSlack\Blocks\Section\CheckboxesSection;
 use Taboritis\ElegantSlack\Support\CheckboxOption;
 
 #[CoversClass(CheckboxesSection::class)]
-class CheckboxesTest extends TestCase
+class CheckboxesSectionTest extends TestCase
 {
     private CheckboxesSection $checkboxes;
 

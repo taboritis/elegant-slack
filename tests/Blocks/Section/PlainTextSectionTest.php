@@ -11,7 +11,7 @@ use Taboritis\ElegantSlack\Blocks\Block;
 use Taboritis\ElegantSlack\Blocks\Section\PlainTextSection;
 
 #[CoversClass(PlainTextSection::class)]
-class PlainTextTest extends TestCase
+class PlainTextSectionTest extends TestCase
 {
     #[Test]
     public function it_extends_block(): void

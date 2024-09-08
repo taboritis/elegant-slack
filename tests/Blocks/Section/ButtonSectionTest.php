@@ -11,7 +11,7 @@ use Taboritis\ElegantSlack\Blocks\Block;
 use Taboritis\ElegantSlack\Blocks\Section\ButtonSection;
 
 #[CoversClass(ButtonSection::class)]
-class ButtonTest extends TestCase
+class ButtonSectionTest extends TestCase
 {
     private ButtonSection $button;
 

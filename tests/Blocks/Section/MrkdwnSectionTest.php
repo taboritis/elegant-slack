@@ -11,7 +11,7 @@ use Taboritis\ElegantSlack\Blocks\Block;
 use Taboritis\ElegantSlack\Blocks\Section\MrkdwnSection;
 
 #[CoversClass(MrkdwnSection::class)]
-class MrkdwnTest extends TestCase
+class MrkdwnSectionTest extends TestCase
 {
     #[Test]
     public function it_extends_a_block(): void
