@@ -8,7 +8,7 @@ use Taboritis\ElegantSlack\Blocks\Block;
 use Taboritis\ElegantSlack\Support\Mrkdwn;
 use Taboritis\ElegantSlack\Support\PlainText;
 
-class SlackImage extends Block
+class SlackImageSection extends Block
 {
     private PlainText|Mrkdwn $text;
 

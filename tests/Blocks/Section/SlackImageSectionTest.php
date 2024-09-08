@@ -8,22 +8,22 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Taboritis\ElegantSlack\Blocks\Block;
-use Taboritis\ElegantSlack\Blocks\Section\SlackImage;
+use Taboritis\ElegantSlack\Blocks\Section\SlackImageSection;
 
-#[CoversClass(SlackImage::class)]
-class SlackImageTest extends TestCase
+#[CoversClass(SlackImageSection::class)]
+class SlackImageSectionTest extends TestCase
 {
     #[Test]
     public function it_extends_a_block(): void
     {
-        $reflection = new \ReflectionClass(SlackImage::class);
+        $reflection = new \ReflectionClass(SlackImageSection::class);
         $this->assertTrue($reflection->isSubclassOf(Block::class));
     }
 
     #[Test]
     public function it_can_be_converted_to_array(): void
     {
-        $section = new SlackImage(
+        $section = new SlackImageSection(
             text: 'Hello, world!',
             imageUrl: 'https://example.com/image.jpg',
             altText: 'alt text'
