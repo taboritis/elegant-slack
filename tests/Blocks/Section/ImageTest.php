@@ -4,17 +4,43 @@ declare(strict_types=1);
 
 namespace Tests\Blocks\Section;
 
-use Taboritis\ElegantSlack\Blocks\Section\Image;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
+use Taboritis\ElegantSlack\Blocks\Block;
+use Taboritis\ElegantSlack\Blocks\Section\Image;
 
 #[CoversClass(Image::class)]
-class ImageTest extends \PHPUnit\Framework\TestCase
+class ImageTest extends TestCase
 {
-    #[Test]
-    public function it_(): void
+    private Image $image;
+
+    protected function setUp(): void
     {
-        $this->markTestIncomplete("TODO: " . __METHOD__);
+        parent::setUp();
+        $this->image = new Image(
+            text: 'This is an image',
+            imageUrl: 'https://example.com/image.jpg',
+            altText: 'An image'
+        );
+    }
+
+    #[Test]
+    public function it_extends_a_block(): void
+    {
+        $this->assertInstanceOf(Block::class, $this->image);
+    }
+
+    #[Test]
+    public function it_can_be_rendered_to_image_section(): void
+    {
+        $imageArray = $this->image->jsonSerialize();
+
+        $this->assertArrayHasKey('type', $imageArray);
+        $this->assertArrayHasKey('text', $imageArray);
+        $this->assertArrayHasKey('accessory', $imageArray);
+        $this->assertArrayHasKey('type', $imageArray['accessory']);
+        $this->assertArrayHasKey('image_url', $imageArray['accessory']);
+        $this->assertArrayHasKey('alt_text', $imageArray['accessory']);
     }
 }
