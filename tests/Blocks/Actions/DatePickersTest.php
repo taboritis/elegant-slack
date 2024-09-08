@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Blocks\Actions;
 
-use Taboritis\ElegantSlackMessages\Blocks\Actions\DatePickers;
+use Taboritis\ElegantSlack\Blocks\Actions\DatePickers;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;

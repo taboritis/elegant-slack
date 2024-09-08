@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages\Blocks\Actions;
+namespace Taboritis\ElegantSlack\Blocks\Actions;
 
 class RadioButtons
 {

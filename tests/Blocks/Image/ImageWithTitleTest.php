@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Blocks\Image;
 
-use Taboritis\ElegantSlackMessages\Blocks\Image\ImageWithTitle;
+use Taboritis\ElegantSlack\Blocks\Image\ImageWithTitle;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;

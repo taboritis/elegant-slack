@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages\Blocks\RichText;
+namespace Taboritis\ElegantSlack\Blocks\RichText;
 
 class Bold
 {

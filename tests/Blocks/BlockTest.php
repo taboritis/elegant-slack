@@ -6,7 +6,7 @@ namespace Tests\Blocks;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
-use Taboritis\ElegantSlackMessages\Blocks\Block;
+use Taboritis\ElegantSlack\Blocks\Block;
 
 #[CoversClass(Block::class)]
 class BlockTest extends \PHPUnit\Framework\TestCase

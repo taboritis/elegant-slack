@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages\Blocks\Divider;
+namespace Taboritis\ElegantSlack\Blocks\Divider;
 
 class Divider
 {

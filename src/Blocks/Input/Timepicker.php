@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages\Blocks\Input;
+namespace Taboritis\ElegantSlack\Blocks\Input;
 
 class Timepicker
 {

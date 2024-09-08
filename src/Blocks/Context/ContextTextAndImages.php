@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages\Blocks\Context;
+namespace Taboritis\ElegantSlack\Blocks\Context;
 
 class ContextTextAndImages
 {
