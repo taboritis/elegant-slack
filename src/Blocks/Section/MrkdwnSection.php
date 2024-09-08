@@ -6,7 +6,7 @@ namespace Taboritis\ElegantSlack\Blocks\Section;
 
 use Taboritis\ElegantSlack\Blocks\Block;
 
-class Mrkdwn extends Block
+class MrkdwnSection extends Block
 {
     public function __construct(private readonly string $mrkdwnText)
     {

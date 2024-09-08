@@ -8,17 +8,17 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Taboritis\ElegantSlack\Blocks\Block;
-use Taboritis\ElegantSlack\Blocks\Section\DatePicker;
+use Taboritis\ElegantSlack\Blocks\Section\DatePickerSection;
 
-#[CoversClass(DatePicker::class)]
+#[CoversClass(DatePickerSection::class)]
 class DatePickerTest extends TestCase
 {
-    private DatePicker $datePicker;
+    private DatePickerSection $datePicker;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->datePicker = new DatePicker(
+        $this->datePicker = new DatePickerSection(
             text: 'date picker',
             initialDate: '2024-10-10',
             placeholder: 'Select a date',

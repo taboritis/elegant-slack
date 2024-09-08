@@ -8,17 +8,17 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Taboritis\ElegantSlack\Blocks\Block;
-use Taboritis\ElegantSlack\Blocks\Section\Button;
+use Taboritis\ElegantSlack\Blocks\Section\ButtonSection;
 
-#[CoversClass(Button::class)]
+#[CoversClass(ButtonSection::class)]
 class ButtonTest extends TestCase
 {
-    private Button $button;
+    private ButtonSection $button;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->button = new Button(
+        $this->button = new ButtonSection(
             section: 'This is section around the button',
             buttonText: 'button text',
             value: 'value',

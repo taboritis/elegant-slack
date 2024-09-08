@@ -7,22 +7,22 @@ namespace Tests\Blocks\Section;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use Taboritis\ElegantSlack\Blocks\Block;
-use Taboritis\ElegantSlack\Blocks\Section\LinkButton;
+use Taboritis\ElegantSlack\Blocks\Section\LinkButtonSection;
 
-#[CoversClass(LinkButton::class)]
+#[CoversClass(LinkButtonSection::class)]
 class LinkButtonTest extends \PHPUnit\Framework\TestCase
 {
     #[Test]
     public function it_extends_a_block(): void
     {
-        $reflection = new \ReflectionClass(LinkButton::class);
+        $reflection = new \ReflectionClass(LinkButtonSection::class);
         $this->assertTrue($reflection->isSubclassOf(Block::class));
     }
 
     #[Test]
     public function it_can_be_rendered_to_link_button_array(): void
     {
-        $linkButton = new LinkButton(
+        $linkButton = new LinkButtonSection(
             text: 'This is a link button',
             buttonText: "Click me",
             url: 'https://example.com',

@@ -6,16 +6,16 @@ namespace Taboritis\ElegantSlack\Blocks\Section;
 
 use Taboritis\ElegantSlack\Blocks\Block;
 
-class Image extends Block
+class ImageSection extends Block
 {
-    private PlainText|Mrkdwn $text;
+    private PlainTextSection|MrkdwnSection $text;
 
     public function __construct(
-        PlainText|Mrkdwn|string $text,
+        PlainTextSection|MrkdwnSection|string $text,
         private readonly string $imageUrl,
         private readonly string $altText
     ) {
-        $this->text = is_string($text) ? new PlainText($text) : $text;
+        $this->text = is_string($text) ? new PlainTextSection($text) : $text;
     }
 
     public function jsonSerialize(): array

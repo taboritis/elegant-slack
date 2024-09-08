@@ -8,15 +8,15 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Taboritis\ElegantSlack\Blocks\Block;
-use Taboritis\ElegantSlack\Blocks\Section\Mrkdwn;
+use Taboritis\ElegantSlack\Blocks\Section\MrkdwnSection;
 
-#[CoversClass(Mrkdwn::class)]
+#[CoversClass(MrkdwnSection::class)]
 class MrkdwnTest extends TestCase
 {
     #[Test]
     public function it_extends_a_block(): void
     {
-        $this->assertInstanceOf(Block::class, new Mrkdwn(fake()->sentence()));
+        $this->assertInstanceOf(Block::class, new MrkdwnSection(fake()->sentence()));
     }
 
     #[Test]
@@ -24,7 +24,7 @@ class MrkdwnTest extends TestCase
     {
         $phrase = fake()->sentence();
 
-        $block = new Mrkdwn($phrase);
+        $block = new MrkdwnSection($phrase);
 
         $this->assertArrayHasKey('text', $block->jsonSerialize());
         $this->assertEquals($phrase, $block->jsonSerialize()['text']['text']);

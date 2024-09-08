@@ -8,22 +8,22 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Taboritis\ElegantSlack\Blocks\Block;
-use Taboritis\ElegantSlack\Blocks\Section\PlainText;
+use Taboritis\ElegantSlack\Blocks\Section\PlainTextSection;
 
-#[CoversClass(PlainText::class)]
+#[CoversClass(PlainTextSection::class)]
 class PlainTextTest extends TestCase
 {
     #[Test]
     public function it_extends_block(): void
     {
-        $this->assertInstanceOf(Block::class, new PlainText(fake()->sentence()));
+        $this->assertInstanceOf(Block::class, new PlainTextSection(fake()->sentence()));
     }
 
     #[Test]
     public function it_needs_a_text(): void
     {
         $phrase = fake()->sentence();
-        $block = new PlainText($phrase);
+        $block = new PlainTextSection($phrase);
 
         $result = $block->jsonSerialize();
 
@@ -37,7 +37,7 @@ class PlainTextTest extends TestCase
     public function it_has_an_emoji(): void
     {
         $phrase = fake()->sentence();
-        $block = new PlainText($phrase);
+        $block = new PlainTextSection($phrase);
 
         $result = $block->jsonSerialize();
 
@@ -48,7 +48,7 @@ class PlainTextTest extends TestCase
     public function emoji_can_be_disabled(): void
     {
         $phrase = fake()->sentence();
-        $block = new PlainText($phrase, emoji: false);
+        $block = new PlainTextSection($phrase, emoji: false);
 
         $result = $block->jsonSerialize();
 
@@ -59,7 +59,7 @@ class PlainTextTest extends TestCase
     public function it_is_stringable(): void
     {
         $phrase = fake()->sentence();
-        $block = new PlainText($phrase, emoji: false);
+        $block = new PlainTextSection($phrase, emoji: false);
 
         $this->assertJson((string)$block);
     }
@@ -69,6 +69,6 @@ class PlainTextTest extends TestCase
     {
         $this->expectException(\RuntimeException::class);
 
-        (new PlainText(''))->__toString();
+        (new PlainTextSection(''))->__toString();
     }
 }

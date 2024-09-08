@@ -8,18 +8,18 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Taboritis\ElegantSlack\Blocks\Block;
-use Taboritis\ElegantSlack\Blocks\Section\Checkboxes;
+use Taboritis\ElegantSlack\Blocks\Section\CheckboxesSection;
 use Taboritis\ElegantSlack\Support\CheckboxOption;
 
-#[CoversClass(Checkboxes::class)]
+#[CoversClass(CheckboxesSection::class)]
 class CheckboxesTest extends TestCase
 {
-    private Checkboxes $checkboxes;
+    private CheckboxesSection $checkboxes;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->checkboxes = new Checkboxes('Plain text', 'action-1');
+        $this->checkboxes = new CheckboxesSection('Plain text', 'action-1');
     }
 
     #[Test]

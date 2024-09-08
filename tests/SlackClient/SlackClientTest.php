@@ -7,8 +7,8 @@ namespace Tests\SlackClient;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
-use Taboritis\ElegantSlack\Blocks\Section\Button;
-use Taboritis\ElegantSlack\Blocks\Section\PlainText;
+use Taboritis\ElegantSlack\Blocks\Section\ButtonSection;
+use Taboritis\ElegantSlack\Blocks\Section\PlainTextSection;
 use Taboritis\ElegantSlack\SlackClient;
 use Taboritis\ElegantSlack\SlackMessage;
 
@@ -30,7 +30,7 @@ class SlackClientTest extends TestCase
     {
         $this->markTestSkipped('This test is skipped because it sends a real message to Slack.');
 
-        $message = new PlainText('Tu jestem!');
+        $message = new PlainTextSection('Tu jestem!');
 
         $response = $this->client->send($message);
 
@@ -42,7 +42,7 @@ class SlackClientTest extends TestCase
     {
         $this->markTestSkipped('This test is skipped because it sends a real message to Slack.');
 
-        $block = new Button(
+        $block = new ButtonSection(
             'Click me',
             'https://example.com',
             'primary',

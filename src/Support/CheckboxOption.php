@@ -6,21 +6,21 @@ namespace Taboritis\ElegantSlack\Support;
 
 use JetBrains\PhpStorm\ArrayShape;
 use JsonSerializable;
-use Taboritis\ElegantSlack\Blocks\Section\Mrkdwn;
-use Taboritis\ElegantSlack\Blocks\Section\PlainText;
+use Taboritis\ElegantSlack\Blocks\Section\MrkdwnSection;
+use Taboritis\ElegantSlack\Blocks\Section\PlainTextSection;
 
 class CheckboxOption implements JsonSerializable
 {
-    private PlainText|Mrkdwn $text;
-    private PlainText|Mrkdwn $description;
+    private PlainTextSection|MrkdwnSection $text;
+    private PlainTextSection|MrkdwnSection $description;
 
     public function __construct(
-        PlainText|Mrkdwn|string $text,
-        PlainText|Mrkdwn|string $description,
+        PlainTextSection|MrkdwnSection|string $text,
+        PlainTextSection|MrkdwnSection|string $description,
         private readonly string $value
     ) {
-        $this->text = is_string($text) ? new PlainText($text) : $text;
-        $this->description = is_string($description) ? new PlainText($description) : $description;
+        $this->text = is_string($text) ? new PlainTextSection($text) : $text;
+        $this->description = is_string($description) ? new PlainTextSection($description) : $description;
     }
 
 

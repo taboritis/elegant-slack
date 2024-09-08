@@ -6,20 +6,20 @@ namespace Taboritis\ElegantSlack\Blocks\Section;
 
 use Taboritis\ElegantSlack\Blocks\Block;
 
-class LinkButton extends Block
+class LinkButtonSection extends Block
 {
-    private PlainText|Mrkdwn $text;
-    private PlainText|Mrkdwn $buttonText;
+    private PlainTextSection|MrkdwnSection $text;
+    private PlainTextSection|MrkdwnSection $buttonText;
 
     public function __construct(
-        PlainText|Mrkdwn|string $text,
-        PlainText|Mrkdwn|string $buttonText,
+        PlainTextSection|MrkdwnSection|string $text,
+        PlainTextSection|MrkdwnSection|string $buttonText,
         private readonly string $url,
         private readonly string $value,
         private readonly string $actionId
     ) {
-        $this->text = is_string($text) ? new PlainText($text) : $text;
-        $this->buttonText = is_string($buttonText) ? new PlainText($buttonText) : $buttonText;
+        $this->text = is_string($text) ? new PlainTextSection($text) : $text;
+        $this->buttonText = is_string($buttonText) ? new PlainTextSection($buttonText) : $buttonText;
     }
 
     public function jsonSerialize(): array

@@ -7,9 +7,9 @@ namespace Taboritis\ElegantSlack\Blocks\Section;
 use Taboritis\ElegantSlack\Blocks\Block;
 use Taboritis\ElegantSlack\Support\CheckboxOption;
 
-class Checkboxes extends Block
+class CheckboxesSection extends Block
 {
-    private PlainText|Mrkdwn $text;
+    private PlainTextSection|MrkdwnSection $text;
 
     /**
      * @var CheckboxOption[]
@@ -17,10 +17,10 @@ class Checkboxes extends Block
     private array $options = [];
 
     public function __construct(
-        PlainText|Mrkdwn|string $text,
+        PlainTextSection|MrkdwnSection|string $text,
         private string $actionId
     ) {
-        $this->text = is_string($text) ? new PlainText($text) : $text;
+        $this->text = is_string($text) ? new PlainTextSection($text) : $text;
     }
 
     public function addOption(CheckboxOption $option): static

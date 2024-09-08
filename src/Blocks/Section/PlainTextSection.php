@@ -7,7 +7,7 @@ namespace Taboritis\ElegantSlack\Blocks\Section;
 use Stringable;
 use Taboritis\ElegantSlack\Blocks\Block;
 
-class PlainText extends Block implements Stringable
+class PlainTextSection extends Block implements Stringable
 {
     public function __construct(private readonly string $phrase, private readonly bool $emoji = true)
     {

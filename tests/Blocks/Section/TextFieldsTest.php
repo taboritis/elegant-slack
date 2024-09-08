@@ -8,18 +8,18 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Taboritis\ElegantSlack\Blocks\Block;
-use Taboritis\ElegantSlack\Blocks\Section\PlainText;
-use Taboritis\ElegantSlack\Blocks\Section\TextFields;
+use Taboritis\ElegantSlack\Blocks\Section\PlainTextSection;
+use Taboritis\ElegantSlack\Blocks\Section\TextFieldsSection;
 
-#[CoversClass(TextFields::class)]
+#[CoversClass(TextFieldsSection::class)]
 class TextFieldsTest extends TestCase
 {
-    private TextFields $textFields;
+    private TextFieldsSection $textFields;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->textFields = new TextFields();
+        $this->textFields = new TextFieldsSection();
     }
     #[Test]
     public function it_extends_block(): void
@@ -30,7 +30,7 @@ class TextFieldsTest extends TestCase
     #[Test]
     public function it_allows_to_add_plain_text(): void
     {
-        $this->textFields->addPlainText(new PlainText('Hello, world!'));
+        $this->textFields->addPlainText(new PlainTextSection('Hello, world!'));
 
         $this->assertIsArray($this->textFields->jsonSerialize());
     }
@@ -57,7 +57,7 @@ class TextFieldsTest extends TestCase
             ]
         ];
 
-        $this->textFields->addPlainText(new PlainText('*this is plain_text text*'));
+        $this->textFields->addPlainText(new PlainTextSection('*this is plain_text text*'));
 
         $this->assertEquals($expected, $this->textFields->jsonSerialize());
     }

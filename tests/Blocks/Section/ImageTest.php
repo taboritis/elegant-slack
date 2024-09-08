@@ -8,17 +8,17 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Taboritis\ElegantSlack\Blocks\Block;
-use Taboritis\ElegantSlack\Blocks\Section\Image;
+use Taboritis\ElegantSlack\Blocks\Section\ImageSection;
 
-#[CoversClass(Image::class)]
+#[CoversClass(ImageSection::class)]
 class ImageTest extends TestCase
 {
-    private Image $image;
+    private ImageSection $image;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->image = new Image(
+        $this->image = new ImageSection(
             text: 'This is an image',
             imageUrl: 'https://example.com/image.jpg',
             altText: 'An image'

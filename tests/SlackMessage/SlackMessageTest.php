@@ -7,8 +7,8 @@ namespace Taboritis\tests\ElegantMessage;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
-use Taboritis\ElegantSlack\Blocks\Section\Mrkdwn;
-use Taboritis\ElegantSlack\Blocks\Section\PlainText;
+use Taboritis\ElegantSlack\Blocks\Section\MrkdwnSection;
+use Taboritis\ElegantSlack\Blocks\Section\PlainTextSection;
 use Taboritis\ElegantSlack\SlackMessage;
 
 #[CoversClass(SlackMessage::class)]
@@ -33,7 +33,7 @@ class SlackMessageTest extends TestCase
     {
         $phrase = fake()->sentence();
 
-        $this->message->addBlock(new PlainText($phrase));
+        $this->message->addBlock(new PlainTextSection($phrase));
 
         $json = $this->message->__toString();
 
@@ -44,7 +44,7 @@ class SlackMessageTest extends TestCase
     #[Test]
     public function it_is_chainable(): void
     {
-        $block = new Mrkdwn(fake()->sentence());
+        $block = new MrkdwnSection(fake()->sentence());
 
         $this->assertInstanceOf(SlackMessage::class, $this->message->addBlock($block));
     }

@@ -25,10 +25,10 @@ composer require taboritis/elegant-slack
 require 'vendor/autoload.php';
 
 use Taboritis\ElegantSlack\SlackClient;
-use Taboritis\ElegantSlack\Blocks\Section\PlainText;
+use Taboritis\ElegantSlack\Blocks\Section\PlainTextSection;
 
 $client = new SlackClient('your-slack-webhook-url');
-$message = new PlainText('Hello, Slack!');
+$message = new PlainTextSection('Hello, Slack!');
 
 $response = $client->send($message);
 
@@ -48,12 +48,12 @@ require 'vendor/autoload.php';
 
 use Taboritis\ElegantSlack\SlackClient;
 use Taboritis\ElegantSlack\SlackMessage;
-use Taboritis\ElegantSlack\Blocks\Section\Button;
+use Taboritis\ElegantSlack\Blocks\Section\ButtonSection;
 
 $client = new SlackClient('your-slack-webhook-url');
 $message = new SlackMessage();
 
-$button = new Button(
+$button = new ButtonSection(
     'Click me',
     'https://example.com',
     'primary',

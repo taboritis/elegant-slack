@@ -6,19 +6,19 @@ namespace Taboritis\ElegantSlack\Blocks\Section;
 
 use Taboritis\ElegantSlack\Blocks\Block;
 
-class DatePicker extends Block
+class DatePickerSection extends Block
 {
-    private PlainText|Mrkdwn $text;
-    private PlainText $placeholder;
+    private PlainTextSection|MrkdwnSection $text;
+    private PlainTextSection $placeholder;
 
     public function __construct(
-        PlainText|Mrkdwn|string $text,
+        PlainTextSection|MrkdwnSection|string $text,
         private readonly ?string $initialDate,
-        PlainText|string $placeholder,
+        PlainTextSection|string $placeholder,
         private readonly string $actionId
     ) {
-        $this->text = is_string($text) ? new PlainText($text) : $text;
-        $this->placeholder = is_string($placeholder) ? new PlainText($placeholder) : $placeholder;
+        $this->text = is_string($text) ? new PlainTextSection($text) : $text;
+        $this->placeholder = is_string($placeholder) ? new PlainTextSection($placeholder) : $placeholder;
     }
 
     public function jsonSerialize(): array
