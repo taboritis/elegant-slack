@@ -18,8 +18,7 @@ class CheckboxOption implements JsonSerializable
         PlainText|Mrkdwn|string $text,
         PlainText|Mrkdwn|string $description,
         private readonly string $value
-    )
-    {
+    ) {
         $this->text = is_string($text) ? new PlainText($text) : $text;
         $this->description = is_string($description) ? new PlainText($description) : $description;
     }
