@@ -7,7 +7,7 @@ namespace Tests\Blocks\Section;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
-use Taboritis\ElegantSlackMessages\Blocks\Section\UsersSelect;
+use Taboritis\ElegantSlack\Blocks\Section\UsersSelect;
 
 #[CoversClass(UsersSelect::class)]
 class UsersSelectTest extends TestCase

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Blocks\RichText;
 
-use Taboritis\ElegantSlackMessages\Blocks\RichText\KitchenSink;
+use Taboritis\ElegantSlack\Blocks\RichText\KitchenSink;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;

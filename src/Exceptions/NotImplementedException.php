@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages\Exceptions;
+namespace Taboritis\ElegantSlack\Exceptions;
 
 class NotImplementedException extends \RuntimeException
 {

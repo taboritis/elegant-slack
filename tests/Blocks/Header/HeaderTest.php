@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Blocks\Header;
 
-use Taboritis\ElegantSlackMessages\Blocks\Header\Header;
+use Taboritis\ElegantSlack\Blocks\Header\Header;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;

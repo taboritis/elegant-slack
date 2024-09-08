@@ -7,8 +7,8 @@ namespace Tests\Blocks\Section;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
-use Taboritis\ElegantSlackMessages\Blocks\Block;
-use Taboritis\ElegantSlackMessages\Blocks\Section\Button;
+use Taboritis\ElegantSlack\Blocks\Block;
+use Taboritis\ElegantSlack\Blocks\Section\Button;
 
 #[CoversClass(Button::class)]
 class ButtonTest extends TestCase

@@ -7,9 +7,9 @@ namespace Taboritis\tests\ElegantMessage;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
-use Taboritis\ElegantSlackMessages\Blocks\Section\Mrkdwn;
-use Taboritis\ElegantSlackMessages\Blocks\Section\PlainText;
-use Taboritis\ElegantSlackMessages\SlackMessage;
+use Taboritis\ElegantSlack\Blocks\Section\Mrkdwn;
+use Taboritis\ElegantSlack\Blocks\Section\PlainText;
+use Taboritis\ElegantSlack\SlackMessage;
 
 #[CoversClass(SlackMessage::class)]
 class SlackMessageTest extends TestCase

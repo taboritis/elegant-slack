@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages\Blocks\Header;
+namespace Taboritis\ElegantSlack\Blocks\Header;
 
 class Header
 {

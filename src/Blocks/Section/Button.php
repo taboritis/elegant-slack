@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages\Blocks\Section;
+namespace Taboritis\ElegantSlack\Blocks\Section;
 
-use Taboritis\ElegantSlackMessages\Blocks\Block;
+use Taboritis\ElegantSlack\Blocks\Block;
 
 class Button extends Block
 {

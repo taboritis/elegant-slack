@@ -7,8 +7,8 @@ namespace Tests\Blocks\Actions;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
-use Taboritis\ElegantSlackMessages\Blocks\Actions\AllSelects;
-use Taboritis\ElegantSlackMessages\Blocks\Block;
+use Taboritis\ElegantSlack\Blocks\Actions\AllSelects;
+use Taboritis\ElegantSlack\Blocks\Block;
 
 #[CoversClass(AllSelects::class)]
 class AllSelectsTest extends TestCase

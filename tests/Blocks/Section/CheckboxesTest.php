@@ -7,8 +7,9 @@ namespace Tests\Blocks\Section;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
-use Taboritis\ElegantSlackMessages\Blocks\Block;
-use Taboritis\ElegantSlackMessages\Blocks\Section\Checkboxes;
+use Taboritis\ElegantSlack\Blocks\Block;
+use Taboritis\ElegantSlack\Blocks\Section\Checkboxes;
+use Taboritis\ElegantSlack\Support\CheckboxOption;
 
 #[CoversClass(Checkboxes::class)]
 class CheckboxesTest extends TestCase
@@ -18,17 +19,25 @@ class CheckboxesTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->checkboxes = new Checkboxes();
+        $this->checkboxes = new Checkboxes('Plain text', 'action-1');
     }
+
     #[Test]
     public function it_extends_a_block(): void
     {
         $this->assertInstanceOf(Block::class, $this->checkboxes);
     }
-    
+
     #[Test]
     public function it_allows_to_add_an_option(): void
     {
-        
+        $result = $this->checkboxes->jsonSerialize();
+        $this->assertCount(0, $result['accessory']['options']);
+
+        $this->checkboxes->addOption(new CheckboxOption('option', 'description', 'value'));
+
+        $result = $this->checkboxes->jsonSerialize();
+
+        $this->assertCount(1, $result['accessory']['options']);
     }
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages\Blocks\Image;
+namespace Taboritis\ElegantSlack\Blocks\Image;
 
 class SlackImage
 {

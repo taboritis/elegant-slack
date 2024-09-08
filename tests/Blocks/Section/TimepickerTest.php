@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Blocks\Section;
 
-use Taboritis\ElegantSlackMessages\Blocks\Section\Timepicker;
+use Taboritis\ElegantSlack\Blocks\Section\Timepicker;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 

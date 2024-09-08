@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Blocks\Input;
 
-use Taboritis\ElegantSlackMessages\Blocks\Input\MultiUsersSelect;
+use Taboritis\ElegantSlack\Blocks\Input\MultiUsersSelect;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;

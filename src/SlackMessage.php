@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages;
+namespace Taboritis\ElegantSlack;
 
 use JsonSerializable;
 use Stringable;
-use Taboritis\ElegantSlackMessages\Blocks\Block;
+use Taboritis\ElegantSlack\Blocks\Block;
 
 class SlackMessage implements Stringable
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages\Blocks\Section;
+namespace Taboritis\ElegantSlack\Blocks\Section;
 
 class Image
 {

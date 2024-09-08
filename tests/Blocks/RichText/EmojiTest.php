@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Blocks\RichText;
 
-use Taboritis\ElegantSlackMessages\Blocks\RichText\Emoji;
+use Taboritis\ElegantSlack\Blocks\RichText\Emoji;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;

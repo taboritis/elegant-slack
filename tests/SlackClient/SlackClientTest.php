@@ -7,10 +7,10 @@ namespace Tests\SlackClient;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
-use Taboritis\ElegantSlackMessages\Blocks\Section\Button;
-use Taboritis\ElegantSlackMessages\Blocks\Section\PlainText;
-use Taboritis\ElegantSlackMessages\SlackClient;
-use Taboritis\ElegantSlackMessages\SlackMessage;
+use Taboritis\ElegantSlack\Blocks\Section\Button;
+use Taboritis\ElegantSlack\Blocks\Section\PlainText;
+use Taboritis\ElegantSlack\SlackClient;
+use Taboritis\ElegantSlack\SlackMessage;
 
 #[CoversClass(SlackClient::class)]
 class SlackClientTest extends TestCase

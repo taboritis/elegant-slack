@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Blocks\Section;
 
-use Taboritis\ElegantSlackMessages\Blocks\Section\RadioButtons;
+use Taboritis\ElegantSlack\Blocks\Section\RadioButtons;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;

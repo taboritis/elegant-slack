@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Blocks\Section;
 
-use Taboritis\ElegantSlackMessages\Blocks\Section\Overflow;
+use Taboritis\ElegantSlack\Blocks\Section\Overflow;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;

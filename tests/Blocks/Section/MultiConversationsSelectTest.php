@@ -6,7 +6,7 @@ namespace Tests\Blocks\Section;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
-use Taboritis\ElegantSlackMessages\Blocks\Section\MultiConversationsSelect;
+use Taboritis\ElegantSlack\Blocks\Section\MultiConversationsSelect;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(MultiConversationsSelect::class)]

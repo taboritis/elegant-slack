@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Blocks\Context;
 
-use Taboritis\ElegantSlackMessages\Blocks\Context\ContextTextAndImages;
+use Taboritis\ElegantSlack\Blocks\Context\ContextTextAndImages;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages\Blocks;
+namespace Taboritis\ElegantSlack\Blocks;
 
 abstract class Block implements \JsonSerializable
 {

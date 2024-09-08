@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages\Blocks\Actions;
+namespace Taboritis\ElegantSlack\Blocks\Actions;
 
-use Taboritis\ElegantSlackMessages\Blocks\Block;
-use Taboritis\ElegantSlackMessages\Exceptions\NotImplementedException;
+use Taboritis\ElegantSlack\Blocks\Block;
+use Taboritis\ElegantSlack\Exceptions\NotImplementedException;
 
 class AllSelects extends Block
 {

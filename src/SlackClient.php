@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taboritis\ElegantSlackMessages;
+namespace Taboritis\ElegantSlack;
 
 use Stringable;
 

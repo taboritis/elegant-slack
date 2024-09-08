@@ -7,9 +7,9 @@ namespace Tests\Blocks\Section;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
-use Taboritis\ElegantSlackMessages\Blocks\Block;
-use Taboritis\ElegantSlackMessages\Blocks\Section\PlainText;
-use Taboritis\ElegantSlackMessages\Blocks\Section\TextFields;
+use Taboritis\ElegantSlack\Blocks\Block;
+use Taboritis\ElegantSlack\Blocks\Section\PlainText;
+use Taboritis\ElegantSlack\Blocks\Section\TextFields;
 
 #[CoversClass(TextFields::class)]
 class TextFieldsTest extends TestCase

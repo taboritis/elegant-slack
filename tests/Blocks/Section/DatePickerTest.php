@@ -6,7 +6,7 @@ namespace Tests\Blocks\Section;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
-use Taboritis\ElegantSlackMessages\Blocks\Section\DatePicker;
+use Taboritis\ElegantSlack\Blocks\Section\DatePicker;
 
 #[CoversClass(DatePicker::class)]
 class DatePickerTest extends \PHPUnit\Framework\TestCase

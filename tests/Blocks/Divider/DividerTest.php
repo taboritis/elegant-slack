@@ -6,7 +6,7 @@ namespace Tests\Blocks\Divider;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
-use Taboritis\ElegantSlackMessages\Blocks\Divider\Divider;
+use Taboritis\ElegantSlack\Blocks\Divider\Divider;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Divider::class)]
