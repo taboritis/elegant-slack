@@ -7,6 +7,7 @@ namespace Tests\Blocks\Input;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
+use Taboritis\ElegantSlack\Blocks\Block;
 use Taboritis\ElegantSlack\Blocks\Input\DispatchesActions;
 
 #[CoversClass(DispatchesActions::class)]
@@ -17,7 +18,7 @@ class DispatchesActionsTest extends TestCase
     {
         $reflection = new \ReflectionClass(DispatchesActions::class);
 
-        $this->assertTrue($reflection->isSubclassOf(\Taboritis\ElegantSlack\Blocks\Block::class));
+        $this->assertTrue($reflection->isSubclassOf(Block::class));
     }
 
     #[Test]
