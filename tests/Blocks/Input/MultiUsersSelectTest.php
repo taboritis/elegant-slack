@@ -13,8 +13,22 @@ use PHPUnit\Framework\TestCase;
 class MultiUsersSelectTest extends TestCase
 {
     #[Test]
-    public function it_(): void
+    public function it_extends_a_block(): void
     {
-        $this->markTestIncomplete("TODO: " . __METHOD__);
+        $reflection = new \ReflectionClass(MultiUsersSelect::class);
+        $this->assertTrue($reflection->isSubclassOf(\Taboritis\ElegantSlack\Blocks\Block::class));
+    }
+
+    #[Test]
+    public function it_can_be_converted_to_an_array(): void
+    {
+        $block = new MultiUsersSelect('placeholder', 'label', 'actionId');
+        $result = $block->jsonSerialize();
+
+        $this->assertArrayHasKey('type', $result);
+        $this->assertArrayHasKey('element', $result);
+        $this->assertArrayHasKey('label', $result);
+        $this->assertArrayHasKey('placeholder', $result['element']);
+        $this->assertArrayHasKey('action_id', $result['element']);
     }
 }
