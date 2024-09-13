@@ -11,6 +11,7 @@ use Taboritis\ElegantSlack\Support\PlainText;
 class RadioButtons extends Block
 {
     private PlainText $label;
+
     /**
      * @var array<Option>
      */
