@@ -9,6 +9,7 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Taboritis\ElegantSlack\Blocks\Block;
 use Taboritis\ElegantSlack\Blocks\Input\RadioButtons;
+use Taboritis\ElegantSlack\Support\Option;
 
 #[CoversClass(RadioButtons::class)]
 class RadioButtonsTest extends TestCase
@@ -18,6 +19,15 @@ class RadioButtonsTest extends TestCase
     {
         $reflection = new \ReflectionClass(RadioButtons::class);
         $this->assertTrue($reflection->isSubclassOf(Block::class));
+    }
+
+    #[Test]
+    public function it_allows_to_add_an_option(): void
+    {
+        $radioButtons = new RadioButtons('label', 'actionId');
+        $radioButtons->addOption(new Option('label', 'value'));
+
+        $this->assertCount(1, $radioButtons->jsonSerialize()['element']['options']);
     }
 
     #[Test]

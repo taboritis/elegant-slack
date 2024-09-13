@@ -33,4 +33,10 @@ class RadioButtons extends Block
             'label' => $this->label->jsonSerialize(),
         ];
     }
+
+    public function addOption(Option $option): static
+    {
+        $this->options[] = $option;
+        return $this;
+    }
 }
