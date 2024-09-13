@@ -10,7 +10,7 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(RadioButtons::class)]
-class RadioButtonsTest extends \PHPUnit\Framework\TestCase
+class RadioButtonsTest extends TestCase
 {
     #[Test]
     public function it_(): void

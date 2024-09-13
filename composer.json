@@ -1,5 +1,5 @@
 {
-    "name": "taboritis/elegant-slack",
+    "name": "taboritis/elegant-slack-php",
     "description": "Slack Message Build Kid written in PHP",
     "type": "library",
     "require": {
