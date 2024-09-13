@@ -24,7 +24,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'  # PHP 8.3
-          extensions: mbstring, intl, pdo_mysql
+          extensions: json, curl
           tools: composer
 
       # Install dependencies
@@ -46,3 +46,6 @@ jobs:
       # PHP CodeSniffer checks
       - name: Run PHP CodeSniffer
         run: vendor/bin/phpcs
+
+      - name: Run Rector
+        run: vendor/bin/rector process --dry-run
