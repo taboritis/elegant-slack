@@ -10,7 +10,7 @@ readonly class PlainText implements JsonSerializable
 {
     public function __construct(
         private string $text,
-        private bool $emoji = false
+        private bool $emoji = true
     ) {
     }
 

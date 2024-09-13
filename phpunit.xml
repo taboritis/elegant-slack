@@ -9,12 +9,12 @@
          beStrictAboutCoverageMetadata="true"
          beStrictAboutOutputDuringTests="true"
          displayDetailsOnPhpunitDeprecations="true"
-          colors="true"
+         colors="true"
          failOnPhpunitDeprecation="true"
          failOnRisky="true"
          failOnWarning="true">
     <testsuites>
-        <testsuite name="default">
+        <testsuite name="ElegantSlack">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
