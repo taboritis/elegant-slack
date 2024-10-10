@@ -4,17 +4,21 @@ declare(strict_types=1);
 
 namespace Tests\Blocks\RichText;
 
-use Taboritis\ElegantSlack\Blocks\RichText\Bold;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
+use Taboritis\ElegantSlack\Blocks\RichText\Formatted\Bold;
+use Taboritis\ElegantSlack\Blocks\RichText\Formatted\FormattedText;
+use Taboritis\ElegantSlack\Support\RichTextElement;
 
 #[CoversClass(Bold::class)]
 class BoldTest extends TestCase
 {
     #[Test]
-    public function it_(): void
+    public function it_implements_formatted_text(): void
     {
-        $this->markTestIncomplete("TODO: " . __METHOD__);
+        $reflection = new \ReflectionClass(Bold::class);
+
+        $this->assertTrue($reflection->implementsInterface(FormattedText::class));
     }
 }

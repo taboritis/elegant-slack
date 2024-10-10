@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Taboritis\ElegantSlack\Support;
 
-use JetBrains\PhpStorm\ArrayShape;
 use JsonSerializable;
 use Taboritis\ElegantSlack\Blocks\Section\MrkdwnSection;
 use Taboritis\ElegantSlack\Blocks\Section\PlainTextSection;
